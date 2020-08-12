@@ -1,0 +1,7 @@
+My tasks
+
+    <% @index.each do |index| %>
+    <% if index.completed %> <% else %> <% end %> <%= link_to index.name, task_path(task.id) %> · <%= link_to index_path(index), method: :delete, data: { confirm: "Delete #{index.name}?" } do %> <% end %>
+    <% end %>
+
+<%= link_to index_path do %> find restaurant <% end %>
